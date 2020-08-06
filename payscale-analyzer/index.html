@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function payscaleAnalyzer(payList) {
+      var bigNum = -Infinity
+      var smallNum = -Infinity
+      var testNum = null
+      for (var i=0; i<payList.length; i++) {
+        testNum = payList[i]
+        if (bigNum < testNum) {
+          bigNum = testNum
+        }
+        if (smallNum > testNum || !i) {
+          smallNum = testNum
+        }
+      }
+      return bigNum-smallNum
+    }
+    console.log(payscaleAnalyzer([28, 34, 21, 39]))
+    console.log(payscaleAnalyzer([18, 22, 19, 26]))
+    console.log(payscaleAnalyzer([41.50, 27.25, 32.50, 29.60]))
+  </script>
+</body>
+</html>
