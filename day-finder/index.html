@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function dayFinder(stringDate) {
+      let date = new Date()
+      date.setMonth(parseInt(stringDate[0] + stringDate[1]) - 1)
+      date.setDate(stringDate[3] + stringDate[4])
+      date.setFullYear(stringDate[6] + stringDate[7] + stringDate[8] + stringDate[9])
+      console.log(date)
+      switch (date.getDay()) {
+        case 0:
+          return 'Sunday'
+          break
+        case 1:
+          return 'Monday'
+          break
+        case 2:
+          return 'Tuesday'
+          break
+        case 3:
+          return 'Wednesday'
+          break
+        case 4:
+          return 'Thursday'
+          break
+        case 5:
+          return 'Friday'
+          break
+        case 6:
+          return 'Saturday'
+          break
+        default:
+          return 'Invalid Day'
+      }
+    }
+    console.log(dayFinder('05/22/1946'))
+    console.log(dayFinder('01/20/2001'))
+    console.log(dayFinder('03/15/1988'))
+  </script>
+</body>
+</html>
