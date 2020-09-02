@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function convertMinutesToSeconds(timeToConvert) {
+      const str = timeToConvert.split(':')
+      const minToSec = parseInt(str[0])*60
+      const sec = parseInt(str[1])
+      return minToSec + sec
+    }
+    console.log(convertMinutesToSeconds('15:34'))
+    console.log(convertMinutesToSeconds('02:45'))
+    console.log(convertMinutesToSeconds('08:21'))
+  </script>
+</body>
+</html>
